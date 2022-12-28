@@ -17,4 +17,24 @@ export class PrincipalComponent implements OnInit {
     this.route.navigate(["sesion"]);
   }
 
+  estudiante(){
+    this.route.navigate(['infoEstudiante']);
+  }
+
+  matricula(){
+    this.route.navigate(['infoMatricula']);
+  }
+
+  docente(){
+    this.route.navigate(['infoDocente']);
+  }
+
+  modalidad(){
+    this.route.navigate(['infomodalidad']);
+  }
+
+  oferta(){
+    this.route.navigate(['infooferta']);
+  }
+
 }
