@@ -15,4 +15,8 @@ export class AppComponent {
   inicio(){
     this.route.navigate(['principal'])
   }
+
+  inicioSesion(){
+    this.route.navigate(['sesion'])
+  }
 }
