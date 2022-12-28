@@ -16,4 +16,8 @@ export class InicioSesionComponent implements OnInit {
   regresar(){
     this.route.navigate(['principal'])
   }
+
+  registro(){
+    this.route.navigate(['registro'])
+  }
 }

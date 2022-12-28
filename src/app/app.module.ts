@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { EstudianteRegistroComponent } from './pages/estudiante-registro/estudiante-registro.component';
 import { InicioSesionComponent } from './pages/inicio-sesion/inicio-sesion.component';
+import { RegistroComponent } from './pages/registro/registro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
     EstudianteRegistroComponent,
-    InicioSesionComponent
+    InicioSesionComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
