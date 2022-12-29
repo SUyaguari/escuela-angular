@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,11 @@ import { InfoOfertaComponent } from './pages/info-oferta/info-oferta.component';
 import { autentificacion } from './domain/singleton';
 import { PrincipalLogginComponent } from './pages/principal-loggin/principal-loggin.component';
 import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
+import { MatriculasRegistroComponent } from './pages/matriculas-registro/matriculas-registro.component';
+import { DocentesRegistroComponent } from './pages/docentes-registro/docentes-registro.component';
+import { AsignaturasRegistroComponent } from './pages/asignaturas-registro/asignaturas-registro.component';
+import { HorariosRegistroComponent } from './pages/horarios-registro/horarios-registro.component';
+import { CalificacionesRegistroComponent } from './pages/calificaciones-registro/calificaciones-registro.component';
 
 @NgModule({
   declarations: [
@@ -30,9 +36,15 @@ import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
     InfoModalidadComponent,
     InfoOfertaComponent,
     PrincipalLogginComponent,
-    AcercaDeComponent
+    AcercaDeComponent,
+    MatriculasRegistroComponent,
+    DocentesRegistroComponent,
+    AsignaturasRegistroComponent,
+    HorariosRegistroComponent,
+    CalificacionesRegistroComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule

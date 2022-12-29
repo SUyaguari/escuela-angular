@@ -18,23 +18,27 @@ export class PrincipalLogginComponent implements OnInit {
   }
 
   estudiante(){
-    this.route.navigate(['infoEstudiante']);
+    this.route.navigate(['estudiante']);
   }
 
   matricula(){
-    this.route.navigate(['infoMatricula']);
+    this.route.navigate(['matricula']);
   }
 
   docente(){
-    this.route.navigate(['infoDocente']);
+    this.route.navigate(['docente']);
   }
 
   modalidad(){
-    this.route.navigate(['infomodalidad']);
+    this.route.navigate(['asignatura']);
   }
 
   oferta(){
-    this.route.navigate(['infooferta']);
+    this.route.navigate(['horario']);
+  }
+  
+  calificaciones(){
+    this.route.navigate(['calificacion']);
   }
 
 }
