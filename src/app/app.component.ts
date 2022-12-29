@@ -19,4 +19,8 @@ export class AppComponent {
   inicioSesion(){
     this.route.navigate(['sesion'])
   }
+
+  acercade(){
+    this.route.navigate(['acercaDe'])
+  }
 }

@@ -8,6 +8,8 @@ import { InfoMatriculasComponent } from './pages/info-matriculas/info-matriculas
 import { InfoDocenteComponent } from './pages/info-docente/info-docente.component';
 import { InfoModalidadComponent } from './pages/info-modalidad/info-modalidad.component';
 import { InfoOfertaComponent } from './pages/info-oferta/info-oferta.component';
+import { PrincipalLogginComponent } from './pages/principal-loggin/principal-loggin.component';
+import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
 
 const routes: Routes = [
   {path: "principal", component: PrincipalComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path: "infoMatricula", component: InfoMatriculasComponent},
   {path: "infoDocente", component: InfoDocenteComponent},
   {path: "infomodalidad", component: InfoModalidadComponent},
-  {path: "infooferta", component: InfoOfertaComponent}
+  {path: "infooferta", component: InfoOfertaComponent},
+  {path: "principalLoggin", component: PrincipalLogginComponent},
+  {path: "acercaDe", component: AcercaDeComponent}
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { autentificacion } from '../../domain/singleton';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class InicioSesionComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private aut: autentificacion) { }
 
   ngOnInit(): void {
   }
@@ -19,5 +20,9 @@ export class InicioSesionComponent implements OnInit {
 
   registro(){
     this.route.navigate(['registro'])
+  }
+
+  loggin(){
+    this.route.navigate(['principalLoggin'])
   }
 }
