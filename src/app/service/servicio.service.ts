@@ -7,6 +7,7 @@ import { Estudiante } from '../domain/estudiante';
 import { Horario } from '../domain/horario';
 import { Matricula } from '../domain/matricula';
 import { Registro } from '../domain/registro';
+import { inicioSesion } from '../domain/inicioSesion';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +16,9 @@ export class ServicioService {
 
   constructor(private http: HttpClient) { }
 
-  getInicioSesion() {
-    let url = "http://localhost:3000/proyectoFinal/ws/clientes"
-    return this.http.get<any>(url);
+  getInicioSesion(sesion: inicioSesion) {
+    let url = "http://localhost:3000/registro/login"
+    return this.http.post<any>(url, sesion);
   }
 
   getAsignatura() {

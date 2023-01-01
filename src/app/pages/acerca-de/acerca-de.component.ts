@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { autentificacion } from '../../domain/singleton';
 
 @Component({
   selector: 'app-acerca-de',
@@ -8,12 +9,16 @@ import { Router } from '@angular/router';
 })
 export class AcercaDeComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private aut: autentificacion) { }
 
   ngOnInit(): void {
   }
 
   regresar(){
-    this.route.navigate(['principal'])
+    if(this.aut.getUsuario()!=null){
+      this.route.navigate(['principalLoggin'])
+    }else{
+      this.route.navigate(['principal'])
+    }
   }
 }

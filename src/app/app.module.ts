@@ -22,6 +22,8 @@ import { DocentesRegistroComponent } from './pages/docentes-registro/docentes-re
 import { AsignaturasRegistroComponent } from './pages/asignaturas-registro/asignaturas-registro.component';
 import { HorariosRegistroComponent } from './pages/horarios-registro/horarios-registro.component';
 import { CalificacionesRegistroComponent } from './pages/calificaciones-registro/calificaciones-registro.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxToastNotifierModule } from 'ngx-toast-notifier';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,17 @@ import { CalificacionesRegistroComponent } from './pages/calificaciones-registro
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxToastNotifierModule.forRoot({
+      timeOut: 2000,
+      bgColors: {
+        success: '#54a254',
+        info: '#1976d2',
+        warning: '#e09f26',
+        danger: '#da2d2d',
+       }
+    }),
   ],
   providers: [autentificacion],
   bootstrap: [AppComponent]

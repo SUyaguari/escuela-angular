@@ -16,6 +16,7 @@ import { DocentesRegistroComponent } from './pages/docentes-registro/docentes-re
 import { AsignaturasRegistroComponent } from './pages/asignaturas-registro/asignaturas-registro.component';
 import { HorariosRegistroComponent } from './pages/horarios-registro/horarios-registro.component';
 import { CalificacionesRegistroComponent } from './pages/calificaciones-registro/calificaciones-registro.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {path: "principal", component: PrincipalComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: "asignatura", component: AsignaturasRegistroComponent},
   {path: "horario", component: HorariosRegistroComponent},
   {path: "calificacion", component: CalificacionesRegistroComponent},
+  {path: "a", component: AppComponent},
 
 ];
 

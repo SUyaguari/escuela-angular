@@ -14,7 +14,7 @@
         <button type="button" class="btn btn-secondary" (click)="inicio()">home</button>
       </li>
       <li class="item">
-        <button type="button" class="btn btn-secondary" (click)="inicioSesion()">Iniciar</button>
+        <button type="button" class="btn btn-secondary" (click)="inicioSesion()">{{sesion}}</button>
       </li>
       <li class="item">
         <button type="button" class="btn btn-secondary" (click)="acercade()">Acerca de</button>
@@ -24,5 +24,7 @@
   
 </nav>
 <router-outlet>
+  
+  <ngx-toast-notifier></ngx-toast-notifier>
 
 </router-outlet>
