@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Registro } from '../../domain/registro';
+import { ServicioService } from '../../service/servicio.service';
 
 @Component({
   selector: 'app-registro',
@@ -11,13 +12,16 @@ export class RegistroComponent implements OnInit {
 
   registro: Registro = new Registro();
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private servicio: ServicioService) { }
 
   ngOnInit(): void {
   }
 
   registrarse(){
-    console.log(this.registro)
+    //console.log(this.registro)
+    this.servicio.postRegistro(this.registro).subscribe(data => console.log(data));
+    this.route.navigate(['sesion'])
+    
   }
 
   regresar(){

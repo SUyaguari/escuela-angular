@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Docente } from '../../domain/docente';
+import { ServicioService } from '../../service/servicio.service';
 
 @Component({
   selector: 'app-docentes-registro',
@@ -12,9 +13,12 @@ export class DocentesRegistroComponent implements OnInit {
   docente: Docente = new Docente();
   docentes: any;
   
-  constructor(private route: Router) { }
+  constructor(private route: Router, private servicio: ServicioService) { }
 
   ngOnInit(): void {
+
+    this.getDocentes();
+
   }
 
   regresar(){
@@ -22,6 +26,17 @@ export class DocentesRegistroComponent implements OnInit {
   }
 
   registro(){
-    console.log(this.docente)
+    //console.log(this.docente)
+    this.servicio.postDocentes(this.docente).subscribe(data => console.log(data));
+    this.docente = new Docente();
+    this.getDocentes();
+    
   }
+
+  getDocentes(){
+
+    this.servicio.getDocentes().subscribe(data => this.docentes = data);
+
+  }
+
 }

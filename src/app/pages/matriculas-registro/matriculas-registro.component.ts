@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Matricula } from '../../domain/matricula';
+import { ServicioService } from '../../service/servicio.service';
 
 @Component({
   selector: 'app-matriculas-registro',
@@ -12,9 +13,12 @@ export class MatriculasRegistroComponent implements OnInit {
   matricula: Matricula = new Matricula();
   matriculas: any;
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private servicio: ServicioService) { }
 
   ngOnInit(): void {
+
+    this.getMatriculas();
+
   }
 
   regresar(){
@@ -22,6 +26,17 @@ export class MatriculasRegistroComponent implements OnInit {
   }
 
   registro(){
-    console.log(this.matricula)
+    //console.log(this.matricula)
+    this.servicio.postMatriculas(this.matricula).subscribe(data => console.log(data));
+    this.matricula = new Matricula();
+    this.getMatriculas();
+
   }
+
+  getMatriculas(){
+
+    this.servicio.getMatriculas().subscribe(data => this.matriculas = data);
+  
+  }
+
 }
